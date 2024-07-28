@@ -21,5 +21,6 @@ I am in development process to include metadatainformation about the Power BI re
  References:
  https://semantic-link-labs.readthedocs.io/en/stable/index.html
  https://powerbi.microsoft.com/en-us/blog/announcing-new-admin-apis-and-service-principal-authentication-to-make-for-better-tenant-metadata-scanning/
+ https://www.powerbidevcamp.net/articles/programming-datasets-with-TOM/
 
  
