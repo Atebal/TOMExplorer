@@ -11,8 +11,15 @@ I am in development process to include metadatainformation about the Power BI re
  Wait for upcoming new features.
  
 
+
+ Acknowledgement:
+ 
+ PyTabular library: https://pypi.org/project/PyTabular/
+ pbipy:https://pypi.org/project/pbipy/1.0.0/
+ https://www.antmanbi.com/
+
  References:
  https://semantic-link-labs.readthedocs.io/en/stable/index.html
- PyTabular library: https://pypi.org/project/PyTabular/
+ https://powerbi.microsoft.com/en-us/blog/announcing-new-admin-apis-and-service-principal-authentication-to-make-for-better-tenant-metadata-scanning/
 
  
