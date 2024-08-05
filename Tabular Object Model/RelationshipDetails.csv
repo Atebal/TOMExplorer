@@ -1,0 +1,80 @@
+,From Table ,To Table,From Cardinality,To Cardinality
+0,ItemDimension,LocalDateTable_d310afff-bdb6-4293-b2ef-048539663401,Many,One
+1,ItemDimension,LocalDateTable_0561e353-064c-4215-958b-d84699240f0c,Many,One
+2,ItemDimension,LocalDateTable_827edacd-9a69-4039-b4f1-2dc2dcbd64f5,Many,One
+3,ItemDimension,LocalDateTable_a073253d-b524-489f-a147-539191f3439d,Many,One
+4,ItemDimension,LocalDateTable_63a10951-d8d6-48a7-b1cd-94c4b7c67ea2,Many,One
+5,ItemDimension,LocalDateTable_dbb19747-e2b2-4bcb-a8f6-e13777767211,Many,One
+6,ItemDimension,LocalDateTable_cd992257-7cc1-4e30-9148-1bd9b19c87c0,Many,One
+7,ItemDimension,LocalDateTable_0c734b34-3050-4284-a676-fac7098ef651,Many,One
+8,ItemDimension,LocalDateTable_0255be88-9582-4628-b7cd-70de87cab23f,Many,One
+9,ItemDimension,LocalDateTable_25d82958-4118-425a-a9b2-9935f07fe0b2,Many,One
+10,ItemDimension,LocalDateTable_3f595219-3287-4c1f-90c8-e3a178fd7a8f,Many,One
+11,ItemDimension,LocalDateTable_8053bdf0-0c1e-4822-8cce-6f1277062066,Many,One
+12,ItemDimension,LocalDateTable_ee104d7a-2df4-4737-a966-e03659aeeff9,Many,One
+13,ItemDimension,LocalDateTable_b8386dd5-b3c4-4b7c-b935-490f497f0c20,Many,One
+14,CustomerDimension,LocalDateTable_7894eaae-01ef-445c-9b03-794b85f1595b,Many,One
+15,CustomerDimension,LocalDateTable_be3937a9-0a0d-4334-81bf-86487a95c471,Many,One
+16,CustomerDimension,LocalDateTable_7396c8bd-462c-4956-80c5-9bc5e28c00ec,Many,One
+17,CustomerDimension,LocalDateTable_7453537f-c71f-4017-9be3-1f70f0a1cf7d,Many,One
+18,CustomerOrders_View,LocalDateTable_a6f03349-f875-47ed-aac6-21d3d9675e44,Many,One
+19,CustomerOrders_View,LocalDateTable_24347064-df0a-4753-93d3-acc9836eea6b,Many,One
+20,CustomerOrders_View,LocalDateTable_5e2078cf-5c08-4c6f-925d-2e88265f11f3,Many,One
+21,CustomerOrders_View,LocalDateTable_7104fef4-fe6b-4d1e-b634-1f457e894566,Many,One
+22,CustomerOrders_View,LocalDateTable_167a9039-c963-47dd-9481-7c9ab46325ff,Many,One
+23,CustomerOrders_View,LocalDateTable_23155cf3-48b0-4656-9671-952319ea4a72,Many,One
+24,CustomerOrders_View,LocalDateTable_c781804e-7838-4d41-9620-cb906949f274,Many,One
+25,CustomerOrders_View,LocalDateTable_447140a2-e6fe-42db-9a07-ab338cdf5b57,Many,One
+26,CustomerOrders_View,LocalDateTable_7cf0a383-ef54-4e25-a4e3-25e48db2ea2b,Many,One
+27,CustomerOrders_View,ItemDimension,Many,One
+28,UC2UC3Dimension,UC2UC3Dimension (Trim),Many,One
+29,EndUserDimension,LocalDateTable_ab6d10fa-2618-4877-aa8b-09457b95d182,Many,One
+30,CustomerOrders_View,Ship Code Table,Many,One
+31,CustomerOrders_View,SalespersonDimension (Corp),Many,One
+32,CustomerOrders_View,CustomerDimension,Many,One
+33,CustomerOrders_View,LocalDateTable_3c4f6c2a-2266-4f16-b524-7d465fb4786f,Many,One
+34,Invoice Items,LocalDateTable_89a4c72f-69f1-4d57-a504-377e820f2863,Many,One
+35,Invoice Items,LocalDateTable_c6745642-bf82-4870-9850-b4f73203ac18,Many,One
+36,Invoice Items,LocalDateTable_30383347-b1de-4850-8b8b-bc36f7867337,Many,One
+37,Invoice Items,UC2UC3Dimension (Trim),Many,One
+38,Invoice Items,SalespersonDimension (Corp),Many,One
+39,Invoice Items,CustomerDimension,Many,One
+40,Invoice Items,Chart of Accounts Mapping,Many,One
+41,ItemDimension,LocalDateTable_faacc9cc-908a-48b8-88e3-39e1bb9c78de,Many,One
+42,CustomerOrders_View,CT Region Key,Many,One
+43,Invoice Items,CT Region Key,Many,One
+44,CT Regions,CT Region Key,Many,One
+45,Invoice Items,ItemDimension,Many,One
+46,Germany Backlog,LocalDateTable_7f04b04a-7929-43ae-983d-db13d01c27f7,Many,One
+47,Germany Backlog,Chart of Accounts Mapping,Many,One
+48,Germany Backlog,UC2UC3Dimension (Trim),Many,One
+49,Germany Backlog,SalespersonDimension (Corp),Many,One
+50,Germany Backlog,CT Region Key,Many,One
+51,brentwood_daily_calendar (2),LocalDateTable_b4ee1073-c193-4843-9b2f-7fa3c85ea0c0,Many,One
+52,brentwood_daily_calendar (2),LocalDateTable_ba7bb401-fd36-4b26-a3af-fc3e10bdd21f,Many,One
+53,brentwood_daily_calendar (2),LocalDateTable_f8c4c008-3529-4a25-97c1-cb8e602b2e27,Many,One
+54,brentwood_daily_calendar (2),LocalDateTable_dc7b838b-4ddc-4abb-ac03-f3c23c21c39a,Many,One
+55,BW_SalesBudgetItemByMonth,UC2UC3Dimension (Trim),Many,One
+56,BW_SalesBudgetItemByMonth,SalespersonDimension (Corp),Many,One
+57,Daily Targets,SalespersonDimension (Corp),Many,One
+58,Daily Targets,UC2UC3Dimension (Trim),Many,One
+59,Daily Targets,CT Regions,Many,One
+60,BW_SalesBudgetItemByMonth,CT Regions,Many,One
+61,Invoice Items,brentwood_daily_calendar (2),Many,One
+62,CustomerOrders_View,brentwood_daily_calendar (2),Many,One
+63,Germany Backlog,brentwood_daily_calendar (2),Many,One
+64,BW_SalesBudgetItemByMonth,brentwood_daily_calendar (2),Many,One
+65,Daily Targets,LocalDateTable_96627c8e-503c-4f8a-813c-ed942f24dda4,Many,One
+66,Daily Targets,brentwood_daily_calendar (2),Many,One
+67,BW_SalesBudgetItemByMonth,CostCentersDimension,Many,One
+68,EndUserDimension,CostCentersDimension,Many,One
+69,SalespersonDimension,CostCentersDimension,Many,One
+70,Currency_Active_Rate (Latest),LocalDateTable_7172ff5b-5b7b-413f-a873-7f1b2548ab6b,Many,One
+71,CustomerOrders_View,UC2UC3Dimension (Trim),Many,One
+72,UC2UC3Dimension (Trim),Sales Groupings,Many,One
+73,Invoice Items,CostCentersDimension,Many,One
+74,CustomerOrders_View,CostCentersDimension,Many,One
+75,bookings,LocalDateTable_1b9d61d1-3fd5-4e88-8211-5fb5c153f609,Many,One
+76,bookings,LocalDateTable_ba2e6f58-9e0d-4cfe-b901-681ecb043986,Many,One
+77,bookings,LocalDateTable_e0de9f9c-4ca9-462e-b754-be83cf0f8e49,Many,One
+78,bookings,CustomerOrders_View,Many,One
