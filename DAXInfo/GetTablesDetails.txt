@@ -1,0 +1,12 @@
+DEFINE 
+var tablesDetails =SELECTCOLUMNS(FILTER(
+                INFO.TABLES(),
+                // Exclude hidden tables
+                [IsHidden] = FALSE()
+            ),"ID",[ID],"TableNametab",[Name])
+			
+var partitionDetials=SELECTCOLUMNS(INFO.PARTITIONS(),"ID",[TableID],"TableName",[Name],"PowerQueryExpression",[QueryDefinition])
+
+var result=SELECTCOLUMNS(NATURALINNERJOIN(tablesDetails,partitionDetials),"Table Name",[TableNametab],"Power Query Expression",[PowerQueryExpression])
+EVALUATE
+result
