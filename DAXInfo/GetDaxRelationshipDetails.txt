@@ -1,0 +1,23 @@
+// Learn more about DAX queries at https://aka.ms/dax-queries
+
+// Here is a sample DAX query from your model, click 'Run'
+// Try other DAX queries by right clicking a table, column, or measure in the data pane and choosing one from 'Quick queries'
+DEFINE
+var fromTablesrelationships=SELECTCOLUMNS(INFO.RELATIONSHIPS(),"RelationshipName",[Name],"FromTableID",[FromTableID],"FromColumnID",[FromColumnID])
+var fromTableNames=SELECTCOLUMNS(FILTER(INFO.TABLES(),[IsHidden] = FALSE()),"FromTableID",[ID],"TableName",[Name])
+var fromcolnames=SELECTCOLUMNS(INFO.COLUMNS(),"FromTableID",[TableID],"FromColumnID",[ID],"colName",[ExplicitName],"FromExpression",[Expression])
+var fromresultwithtablenames=SELECTCOLUMNS(NATURALINNERJOIN(fromTablesrelationships,fromTableNames),"FromTableID",[FromTableID],"TableName",[TableName],"RelationshipName",[RelationshipName],"FromColumnID",[FromColumnID])
+var result2=SELECTCOLUMNS(NATURALINNERJOIN(fromresultwithtablenames,fromcolnames),"FromTableName",[TableName],"RelationshipName",[RelationshipName],"FromColumnID",[FromColumnID],"FromColumName",[colName],"FromExpression",[FromExpression])
+
+var toTablesrelationships=SELECTCOLUMNS(INFO.RELATIONSHIPS(),"ToTableID",[ToTableID],"RelationshipName",[Name],"ToColumnID",[ToColumnID])
+var ToTableNames=SELECTCOLUMNS(FILTER(INFO.TABLES(),[IsHidden] = FALSE()),"ToTableID",[ID],"TableName",[Name])
+var tocolnames=SELECTCOLUMNS(INFO.COLUMNS(),"ToTableID",[TableID],"ToColumnID",[ID],"colName",[ExplicitName],"ToExpression",[Expression])
+	
+var toresultwithtablenames=SELECTCOLUMNS(NATURALINNERJOIN(toTablesrelationships,ToTableNames),"ToTableID",[ToTableID],"TableName",[TableName],"RelationshipName",[RelationshipName],"ToColumnID",[ToColumnID])
+
+var result1=SELECTCOLUMNS(NATURALINNERJOIN(toresultwithtablenames,tocolnames),"ToTableName",[TableName],"RelationshipName",[RelationshipName],"ToColumnID",[ToColumnID],"ToColumName",[colName],"ToExpression",[ToExpression])
+
+var finalresut=SELECTCOLUMNS(NATURALINNERJOIN(result1,result2),"RelationshipName",[RelationshipName],"FromTableName",[FromTableName],"FromColumnID",[FromColumnID],"FromColumName",[FromColumName],"FromColumnExpression",[FromExpression],"ToTableName",[ToTableName],"ToColumnID",[ToColumnID],"ToColumName",[ToColumName],"ToColumnExpression",[ToExpression])
+	EVALUATE
+finalresut
+	
