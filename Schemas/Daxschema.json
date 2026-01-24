@@ -1,0 +1,33 @@
+{
+  "role": "Power BI DAX Expert",
+  "task": "Generate a DAX measure based on the provided schema.",
+  "model_context": {
+    "tables": [
+      {
+        "table_name": "Sales",
+        "columns": ["OrderDate", "Quantity", "Price", "ProductID", "RegionID"]
+      },
+      {
+        "table_name": "Date",
+        "columns": ["Date", "Year", "Month", "Quarter"],
+        "is_date_table": true
+      }
+    ],
+    "relationships": [
+      "Sales[OrderDate] 1:* Date[Date]"
+    ],
+    "existing_measures": {
+      "Total Revenue": "SUMX(Sales, Sales[Quantity] * Sales[Price])"
+    }
+  },
+  "request": {
+    "measure_name": "Rolling 3-Month Revenue",
+    "logic_requirements": [
+      "Calculate revenue for the last 3 months including the current month",
+      "Must handle incomplete months at the start of the dataset",
+      "Use VAR/RETURN syntax",
+      "Include error handling for nulls"
+    ]
+  },
+  "output_format": "DAX Code Block with inline comments"
+}
