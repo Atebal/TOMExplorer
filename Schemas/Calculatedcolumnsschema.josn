@@ -1,0 +1,35 @@
+{
+  "role": "Power BI DAX Expert",
+  "task": "Generate high-performance DAX code",
+  "dax_object_type": "Calculated Column", 
+  "model_context": {
+    "tables": [
+      {
+        "table_name": "Sales",
+        "columns": ["Quantity", "NetPrice", "Cost", "OrderDate"],
+        "is_fact_table": true
+      },
+      {
+        "table_name": "Product",
+        "columns": ["ProductID", "Category", "SubCategory"],
+        "is_dimension": true
+      }
+    ],
+    "relationships": [
+      "Sales[ProductID] *:[1] Product[ProductID]"
+    ]
+  },
+  "request_details": {
+    "name": "GrossMarginCategory",
+    "target_table": "Sales",
+    "business_logic": "Calculate margin (Price - Cost). If margin > 50, label as 'High', else 'Low'.",
+    "use_variables": true,
+    "include_comments": true
+  },
+  "type_specific_instructions": {
+    "calculated_column": "Ensure row context is utilized. Avoid CALCULATE unless context transition is required.",
+    "calculated_table": "Return a table expression using functions like FILTER, SUMMARIZE, or UNION.",
+    "measure": "Focus on filter context and aggregation (SUM, DIVIDE, etc.)."
+  },
+  "output_format": "Provide only the DAX code block followed by a brief logic explanation."
+}
