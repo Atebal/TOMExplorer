@@ -1,0 +1,37 @@
+{
+  "role": "Power BI DAX Architect",
+  "dax_object_type": "Calculation Group", 
+  "model_context": {
+    "tables": [
+      {
+        "table_name": "Sales",
+        "columns": ["Amount", "OrderDate", "Quantity"],
+        "is_fact": true
+      },
+      {
+        "table_name": "Calendar",
+        "columns": ["Date", "Year", "Month"],
+        "is_date_table": true
+      }
+    ],
+    "relationships": ["Sales[OrderDate] *:[1] Calendar[Date]"],
+    "existing_measures": {
+      "Total Sales": "SUM(Sales[Amount])"
+    }
+  },
+  "request": {
+    "name": "Time Intelligence",
+    "target_table": "N/A",
+    "logic": "Create a calculation group with items for 'Current', 'MTD', and 'PY'.",
+    "constraints": [
+      "Use VAR/RETURN",
+      "Use SELECTEDMEASURE() for calculation items",
+      "Handle empty date selections"
+    ]
+  },
+  "type_specific_context": {
+    "calculated_column": "Row context enabled. Use RELATED() for dimensions.",
+    "calculated_table": "Output must be a table constructor (FILTER, SUMMARIZE, etc.).",
+    "calculation_group": "Use SELECTEDMEASURE(). Return Calculation Items with Precedence."
+  }
+}
